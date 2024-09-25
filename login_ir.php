@@ -1,0 +1,68 @@
+<<<<<<< HEAD
+<?php
+
+    session_start();    
+
+    print ($_POST);
+    
+    print "<hr>";
+
+    include("kapcsolat.php");
+
+    $md5pw = md5( $_POST['pw'] ) ;
+    
+    $sorokszama = mysqli_num_rows( mysqli_query( $adb , " 
+
+                        SELECT * FROM user 
+                        WHERE ( uemail='$_POST[email]'  OR unick='$_POST[email]' )
+                        AND     upw   ='$md5pw'
+                        AND     ustatusz='E' 
+    " ) ) ;
+    if( $sorokszama==1 )  
+        die( "<script> alert('Fejezd be a regisztrációdat az e-mailben kapott link alapján!') </script>" ) ;
+
+
+    $user =  mysqli_fetch_array( mysqli_query( $adb , " 
+
+                        SELECT * FROM user 
+                        WHERE ( uemail='$_POST[email]'  OR unick='$_POST[email]' )
+                        AND     upw   ='$md5pw'
+                        AND   ( ustatusz='A' OR ustatusz='F' ) 
+    " ) ) ;
+
+    if( $user['uid']=="" )  
+		die( "<script> alert('Hibás belépési adatok!') </script>" ) ;
+
+
+
+
+
+	$_SESSION['uid']    =  $user['uid']    ;
+	$_SESSION['unick']  =  $user['unick']  ;
+	$_SESSION['umail']  =  $user['uemail'] ;
+
+
+
+	print  "<script> parent.location.href='http://weissesvagyok.localhost/' </script>"  ;
+
+
+    mysqli_close( $adb ) ;
+
+
+=======
+<?php
+
+    print ($_POST);
+    
+    print "<hr>";
+
+   include("kapcsolat.php");
+
+   $sorokszama = 
+
+
+
+
+
+>>>>>>> ab5ec25af34bb968328eb3e2df202078df2f566e
+?>
