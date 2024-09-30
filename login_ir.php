@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
     session_start();    
@@ -49,20 +48,4 @@
     mysqli_close( $adb ) ;
 
 
-=======
-<?php
-
-    print ($_POST);
-    
-    print "<hr>";
-
-   include("kapcsolat.php");
-
-   $sorokszama = 
-
-
-
-
-
->>>>>>> ab5ec25af34bb968328eb3e2df202078df2f566e
 ?>

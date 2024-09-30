@@ -1,6 +1,5 @@
 <?php
 
-<<<<<<< HEAD
 
     print "<hr>" ;
 
@@ -62,20 +61,4 @@ https://weissesvagyok.hu/regisztracio-megerosites/" . $strid . "
 
 
     mysqli_close( $adb ) ;
-=======
-    print ($_POST);
-    
-    print "<hr>";
-
-    if($_POST['uemail'= ""])
-        die("<script> alert ('Nem adtad meg az email címed!')</script>")
-
-    if(strlen($_POST['upw1']) < 4)
-        die("<script> alert ('A jelszónak min.4 karakterből kell állnia!)</script>")
-
-
-
-
-
->>>>>>> ab5ec25af34bb968328eb3e2df202078df2f566e
 ?>
