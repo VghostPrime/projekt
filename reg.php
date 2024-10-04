@@ -18,11 +18,8 @@
 
 </div>
 <div class="regFormContainer">
-<<<<<<< HEAD
+    
     <form action='reg_ir.php' method=post target='kisablak'>
-=======
-    <form action="reg_ir.php" method=post>
->>>>>>> ab5ec25af34bb968328eb3e2df202078df2f566e
         <!-- Headings for the form -->
         <div class="headingsContainer">
             <h3>Regisztráció</h3>
@@ -32,38 +29,23 @@
         <!-- Main container for all inputs -->
         <div class="mainContainer">
             <!-- Username -->
-<<<<<<< HEAD
             <label for="unick">Felhasználónév</label>
             <input type="text" placeholder="" name="unick" required>
 
             <!-- Username -->
             <label for="uemail">Email</label>
             <input  placeholder="" name="uemail" required type='email'>
-=======
-            <label for="username">Felhasználónév</label>
-            <input type="text" placeholder="" name="unick" required>
+            <br>
+            
 
-            <!-- Username -->
-            <label for="username">Email</label>
-            <input type="text" placeholder="" name="uemail" required>
->>>>>>> ab5ec25af34bb968328eb3e2df202078df2f566e
-
-            <br><br>
+            <br>
 
             <!-- Password -->
-<<<<<<< HEAD
-            <label for="upw1">Jelszavak</label>
+            <label for="upw1">Jelszava</label>
             <input type="password" placeholder="Legalább 8 karakter" name="upw1" required>
 
             <!-- Password -->
-            <label for="upw2">Jelszavak</label>
-=======
-            <label for="pswrd">Jelszavak</label>
-            <input type="password" placeholder="Legalább 8 karakter" name="upw1" required>
-
-            <!-- Password -->
-            <label for="pswrd">Jelszavak</label>
->>>>>>> ab5ec25af34bb968328eb3e2df202078df2f566e
+            <label for="upw2">Jelszava mégegyszer</label>
             <input type="password" placeholder="" name="upw2" required>
 
             <br><br>

@@ -32,7 +32,7 @@
 							SELECT * FROM korabbinev 
 							WHERE kunick='$_POST[unick]' 
 	" ) ) )
-		die( "<script> alert('Ez a felhasználónév nem szabad!') </script>" ) ;
+		die( "<script> alert('Ez a felhasználónév már foglalt!') </script>" ) ;
 
 
 	$md5pw = md5( $_POST['upw1'] ) ;
@@ -41,8 +41,8 @@
 
 	mysqli_query( $adb , "
 
-		INSERT INTO user (uid ,  ustrid  ,         unick  ,     upw , unev, uwmail,         uemail  , uom, udatum,  uip , ustatusz, ukomment) 
-		VALUES           (NULL, '$strid' , '$_POST[unick]', '$md5pw', ''  , ''    , '$_POST[uemail]', '' , NOW() , '$ip', 'A'     , ''      )
+		INSERT INTO user (uid ,  ustrid  ,         unick  ,     upw ,         unev    , uwmail,         uemail  , uom, udatum,  uip , ustatusz, ukomment) 
+		VALUES           (NULL, '$strid' , '$_POST[unick]', '$md5pw', '$_POST[unev]'  , ''    , '$_POST[uemail]', '' , NOW() , '$ip', 'A'     , ''      )
 
 
 	" ) ;
@@ -57,7 +57,14 @@ https://weissesvagyok.hu/regisztracio-megerosites/" . $strid . "
 //	mail( $_POST['uemail'] , "Regisztráció megerősítése" , $uzenet , "From:ne-valaszolj@weissesvagyok.hu" ) ;
 
 
-	print  "<script> alert('Regisztrációd sikeresen megtörtént.') </script>"  ;
+	print  "<script> 
+				
+				alert('Regisztrációd sikeresen megtörtént.') 
+			
+				parent.location.href = \"http://localhost/zz/wvp/belepes\" 
+			
+			</script>" ;
+			
 
 
     mysqli_close( $adb ) ;

@@ -39,10 +39,11 @@
 	$_SESSION['uid']    =  $user['uid']    ;
 	$_SESSION['unick']  =  $user['unick']  ;
 	$_SESSION['umail']  =  $user['uemail'] ;
+    $_SESSION['unev']   =  $user['unev']   ;
 
 
 
-	print  "<script> parent.location.href='http://weissesvagyok.localhost/' </script>"  ;
+	print  "<script> parent.location.href='http://localhost/zz/wvp/index.php' </script>"  ;
 
 
     mysqli_close( $adb ) ;

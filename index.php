@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 <?php
   session_start()
 
 
 ?>  
-=======
->>>>>>> ab5ec25af34bb968328eb3e2df202078df2f566e
 <!DOCTYPE html>
 
 <html>
@@ -29,47 +26,51 @@
 	      <a href="/portrek/"> PORTRÉK </a>  <!-- személyiségtesztek -->
 	      <a href="/palyaiv/"> PÁLYAÍV </a>  <!-- ... ... ... ...    -->
         <a href="*"> PSZICHOLÓGUS </a>  <!-- ... ... ... ...    -->
-<<<<<<< HEAD
-        
-      <div id="belepes">
           
-        
-
-          <?php 
-
+        <div id="belepes">
             
           
-            $m1 = $_GET['m1'];
 
-            if(!isset($_SESSION['uid']))
-            {
-              print "<a href='belepes'> BELÉPÉS </a>" ;
-            }
-            else
-            {
-              print "<a href='kilepes'> KILÉPÉS </a>" ;
-            }
-      
-          
+            <?php 
+
+              
+            
+            
+
+              if(!isset($_SESSION['uid']))
+              {
+                print '<a href="belepes"> BELÉPÉS </a>' ; //print "<a href='belepes'> BELÉPÉS </a>" ;
+              }
+              else
+              {
+                echo "<a href='profil'> $_SESSION[unick] </a>" ;
+                      //print "<a href='index.php'>. "$user['unick']" . </a>" ;
+                
+                print"
+                  
+                    <a href='javascript:' onclick='kisablak.location.href=\"http://localhost/zz/wvp/logout.php\"'><img src='images/logout.png' class='kilepesgomb' alt='profilkep'></a>
 
 
-          
-          ?>
-          
-=======
-      
-      <div id="belepes">
-        <a href="belepes"> BELÉPÉS </a>
->>>>>>> ab5ec25af34bb968328eb3e2df202078df2f566e
-      </div>
+                    ";
+              }
+                    
 
-	</div>
+
+            
+            ?>
+            <script>
+            
+
+            </script>
+            
+        </div>
+
+	    </div>
 
   <hr style="clear:both; margin:0;" size="1">
     </div>
 
     
-<<<<<<< HEAD
    
 
 
@@ -77,15 +78,19 @@
 <?php
 
 
+    $m1 = $_GET['m1'];  
 
     if( !isset( $_SESSION['uid'] ) )
     {
-    if( $m1 == "belepes" )        include( "login.php" ) ;
-    if( $m1 == "regisztracio" )   include( "reg.php"   ) ;
+    
+    if( $m1 == "belepes"      )        include( "login.php" ) ;
+    if( $m1 == "regisztracio" )        include( "reg.php"   ) ;
+    
     }
     else
     {
-    print "Beléptél, örüljél!" ;
+    print $_SESSION['unick'] . ", Sikeresen beléptél!";
+    
     }
 
 
@@ -96,24 +101,9 @@
 ?>
 </div>
 
-<iframe name='kisablak'></iframe>
+<iframe name='kisablak' id="kisablak"></iframe>
  
 
 
     </body>
 </html>
-=======
-    </body>
-</html>
-
-
-<?php
-
-
-$m1 = @$_GET['m1'] ;
-    if( $m1 == "belepes" )        include( "Login.php" ) ;
-    if( $m1 == "regisztracio" )   include( "reg.php"   ) ;
-    if( $m1 == "fooldal" )        include( "index.php" ) ;
-
-?>
->>>>>>> ab5ec25af34bb968328eb3e2df202078df2f566e
